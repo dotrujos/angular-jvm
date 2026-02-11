@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-
-<html>
-	<body>
-		<p>{{ helloWorld }}</p>
-		<p>This is predefined text: {{ date }}</p>
-		<p>{{ date }}</p>
-	</body>
-</html>
