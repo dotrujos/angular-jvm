@@ -1,5 +1,5 @@
 #include <jni.h>
-#include "../headers/com_gabrielaraujo_angular_Main.h"
+#include "../headers/com_gabrielaraujo_angular_controller_NgControllerBootstrap.h"
 #include <iostream>
 #include <string>
 #include <format>
@@ -13,7 +13,7 @@ std::string ReplaceAll(std::string str, const std::string& from, const std::stri
     return str;
 }
 
-JNIEXPORT jstring JNICALL Java_com_gabrielaraujo_angular_Main_replaceVariableOcurrencies
+JNIEXPORT jstring JNICALL Java_com_gabrielaraujo_angular_controller_NgControllerBootstrap_replaceVariableOcurrencies
   (JNIEnv *env, jobject thisObj, jstring html, jobjectArray keys, jobjectArray values) {
 	int keysLen = env->GetArrayLength(keys);
 	int valuesLen = env->GetArrayLength(values);

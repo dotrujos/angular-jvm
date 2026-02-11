@@ -4,4 +4,49 @@
   <artifactId>angular</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Angular Server Side</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.20.0</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.20.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.36</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version> <configuration>
+                <source>21</source>
+                <target>21</target>
+                <compilerArgs>
+                    <arg>-h</arg>
+                    <arg>${project.basedir}/natives/headers</arg>
+                    <arg>-proc:full</arg> </compilerArgs>
+                <annotationProcessorPaths>
+                    <path>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>1.18.36</version>
+                    </path>
+                </annotationProcessorPaths>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
 </project>
